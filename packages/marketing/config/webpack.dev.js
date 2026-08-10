@@ -12,7 +12,7 @@ const devConfig = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: require('./public/index.html'),
+            template: './public/index.html',
         })
     ]
 };
