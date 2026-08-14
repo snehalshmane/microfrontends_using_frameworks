@@ -7,6 +7,7 @@ import {StylesProvider} from "@material-ui/core";
 
 const MarketingLazy = React.lazy(() => import('./components/MarketingApp'));
 const AuthLazy = React.lazy(() => import('./components/AuthApp'));
+const DashboardLazy = React.lazy(() => import('./components/DashboardApp'));
 
 const generateClassName = createGenerateClassName({productionPrefix: "co"});
 
@@ -21,6 +22,9 @@ export default () => {
                     <Switch>
                         <Route path="/auth">
                             <AuthLazy onSignIn={() => setIsSignedIn(true)}/>
+                        </Route>
+                        <Route path="/dashboard">
+                            <DashboardLazy/>
                         </Route>
                         <Route path="/">
                             <MarketingLazy/>
